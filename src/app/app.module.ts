@@ -1,6 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {RouterModule} from '@angular/router';
 
+// import archivo de rutas
+import { APP_ROUTING } from './app.routes';
+
+// componentes
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -28,7 +34,11 @@ import { ContactoComponent } from './pages/home/contacto/contacto.component';
     ContactoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    RouterModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(APP_ROUTING, {useHash: true}),
   ],
   providers: [],
   bootstrap: [AppComponent]
