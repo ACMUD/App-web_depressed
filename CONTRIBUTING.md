@@ -8,7 +8,7 @@ se tienen 3 ramas que tiene cierta jerarquia
 
 ***master (intocable)*** esta esta rama solo tendra los cambios para el ambiente de produccion.
 
-***pruebas (intocable)*** ambiennte de pruebas / preproduccion
+***prepord (intocable)*** ambiennte de pruebas / preproduccion
 
 ***dev (desarrollo en local)*** esta rama contendra desarrollo en local pero no se admitira subir cambios directos sobre esta rama.
 
