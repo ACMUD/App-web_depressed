@@ -19,3 +19,5 @@ o
 ng serve
 ```
 por defecto el proyecto correra en [localhost:4200](http://localhost:4200)
+
+los lineamientos y reglas del proyecto estan en  [contribucion y lineamientos](./CONTRIBUTING.md)
