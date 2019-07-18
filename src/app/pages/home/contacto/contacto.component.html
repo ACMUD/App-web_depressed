@@ -1,3 +1,64 @@
-<p>
-  contacto works!
-</p>
+<div class="row">
+  <div class="col s10 push-s1">
+    <div class="row">
+      <div class="col s12">
+        <h3>¡Contacta con nosotros!</h3>
+      </div>
+    </div>
+    <div class="row">
+      <form (ngSubmit)="onSubmit(contactForm.value)" #contactForm="ngForm" class="col s12 m12 l6">
+        <p>Llena el formulario y un correo será enviado. Pronto recibiras tu respuesta.</p>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="name" name="name" type="text" class="validate" required ngModel>
+            <label class="active" for="name">Nombre*</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" name="email" type="email" class="validate" required ngModel>
+            <label class="active" for="email">Email*</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="entity" name="entity" type="text" class="validate" ngModel>
+            <label class="active" for="entity">Entidad o institución</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="description" name="description" class="materialize-textarea validate" required ngModel></textarea>
+            <label class="active" for="description">Mensaje*</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 center-div">
+            <button type="submit" class="btn waves-effect waves-light submit-btn" [disabled]="!contactForm.form.valid"><i
+                class="icon ion-md-send"></i>Enviar</button>
+          </div>
+        </div>
+      </form>
+      <div class="col s12 m12 l6">
+        <div class="row">
+          <div id="map"></div>
+        </div>
+        <div class="row">
+          <div class="col s6 center-div">
+            <a class="waves-effect waves-dark btn social-btn" href="https://www.facebook.com/ACMUD/" target="_blank"><i
+                class="icon ion-logo-facebook"></i>Facebook</a>
+          </div>
+          <div class="col s6 center-div">
+            <a class="waves-effect waves-dark btn social-btn" href="https://github.com/ACMUD" target="_blank"><i
+                class="icon ion-logo-github"></i>Github</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
