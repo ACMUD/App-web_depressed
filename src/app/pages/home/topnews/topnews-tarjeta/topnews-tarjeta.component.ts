@@ -14,4 +14,8 @@ export class TopnewsTarjetaComponent implements OnInit {
   ngOnInit() {
   }
 
+  action(){
+    console.log("click")
+  }
+
 }
