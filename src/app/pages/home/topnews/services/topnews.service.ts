@@ -34,5 +34,5 @@ export interface Topnews_card {
     titulo: string;
     img: string;
     descripcion: string;
-    //fecha
+    //fecha: ?
 }
