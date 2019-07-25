@@ -10,7 +10,7 @@ declare let M;
   styleUrls: ['./contacto.component.css']
 })
 export class ContactoComponent implements OnInit {
-  @ViewChild('contactForm', {static: false}) contactForm;
+  @ViewChild('contactForm', {read: false}) contactForm;
 
   constructor(public messageService: MessageService) {
   }
@@ -26,14 +26,14 @@ export class ContactoComponent implements OnInit {
   }
 
   onSubmit(data) {
-    this.messageService.sendMessage(data).subscribe(
+    /*this.messageService.sendMessage(data).subscribe(
       (response) => {
         M.toast({html: 'Correo enviado correctamente.'});
         this.contactForm.reset();
       },
       err => {
         M.toast({html: 'No se ha podido enviar su correo'});
-      });
+      });*/
   }
 
 }
