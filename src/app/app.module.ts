@@ -18,6 +18,8 @@ import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.compo
 import { BannerComponent } from './pages/home/banner/banner.component';
 import { TopnewsComponent } from './pages/home/topnews/topnews.component';
 import { ContactoComponent } from './pages/home/contacto/contacto.component';
+import { TopnewsTarjetaComponent } from './pages/home/topnews/topnews-tarjeta/topnews-tarjeta.component';
+import { TopnewsService } from './pages/home/topnews/services/topnews.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { ContactoComponent } from './pages/home/contacto/contacto.component';
     QuienesSomosComponent,
     BannerComponent,
     TopnewsComponent,
-    ContactoComponent
+    ContactoComponent,
+    TopnewsTarjetaComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,9 @@ import { ContactoComponent } from './pages/home/contacto/contacto.component';
     ReactiveFormsModule,
     RouterModule.forRoot(APP_ROUTING, {useHash: true}),
   ],
-  providers: [],
+  providers: [
+    TopnewsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
