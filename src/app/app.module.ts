@@ -6,6 +6,10 @@ import {RouterModule} from '@angular/router';
 // import archivo de rutas
 import { APP_ROUTING } from './app.routes';
 
+// // import mdb
+// import { MDBBootstrapModule } from 'angular-bootstrap-md';
+// import { IconsModule } from 'angular-bootstrap-md';
+
 // componentes
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -41,6 +45,8 @@ import { TopnewsService } from './pages/home/topnews/services/topnews.service';
     FormsModule,
     RouterModule,
     ReactiveFormsModule,
+    // IconsModule,
+    // MDBBootstrapModule.forRoot(),
     RouterModule.forRoot(APP_ROUTING, {useHash: true}),
   ],
   providers: [
