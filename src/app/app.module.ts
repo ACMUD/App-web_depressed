@@ -6,6 +6,10 @@ import {RouterModule} from '@angular/router';
 // import archivo de rutas
 import { APP_ROUTING } from './app.routes';
 
+// // import mdb
+// import { MDBBootstrapModule } from 'angular-bootstrap-md';
+// import { IconsModule } from 'angular-bootstrap-md';
+
 // componentes
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -18,6 +22,8 @@ import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.compo
 import { BannerComponent } from './pages/home/banner/banner.component';
 import { TopnewsComponent } from './pages/home/topnews/topnews.component';
 import { ContactoComponent } from './pages/home/contacto/contacto.component';
+import { TopnewsTarjetaComponent } from './pages/home/topnews/topnews-tarjeta/topnews-tarjeta.component';
+import { TopnewsService } from './pages/home/topnews/services/topnews.service';
 
 @NgModule({
   declarations: [
@@ -31,16 +37,21 @@ import { ContactoComponent } from './pages/home/contacto/contacto.component';
     QuienesSomosComponent,
     BannerComponent,
     TopnewsComponent,
-    ContactoComponent
+    ContactoComponent,
+    TopnewsTarjetaComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule,
     ReactiveFormsModule,
+    // IconsModule,
+    // MDBBootstrapModule.forRoot(),
     RouterModule.forRoot(APP_ROUTING, {useHash: true}),
   ],
-  providers: [],
+  providers: [
+    TopnewsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
